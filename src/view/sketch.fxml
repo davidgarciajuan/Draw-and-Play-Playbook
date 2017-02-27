@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="canvas" maxHeight="500.0" maxWidth="800.0" style="-fx-background-color: #3d3d3d;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Sketch">
+   <children>
+      <ImageView fx:id="fondo" fitHeight="466.0" fitWidth="514.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/pistaAtaque.png" />
+         </image>
+      </ImageView>
+      <Canvas fx:id="baseCanvas" height="500.0" width="646.0">
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+      </Canvas>
+   </children>
+   <cursor>
+      <Cursor fx:constant="CROSSHAIR" />
+   </cursor>
+</StackPane>

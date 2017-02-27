@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane cache="true" cacheHint="SPEED" focusTraversable="true" maxHeight="314.0" maxWidth="439.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="314.0" prefWidth="439.0" styleClass="background" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlayEditDialogController">
+   <children>
+      <GridPane cacheShape="false" centerShape="false" layoutX="30.0" layoutY="28.0" maxHeight="165.0" prefHeight="165.0" prefWidth="419.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="261.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="%Name" />
+            <Label text="%Type" GridPane.rowIndex="1" />
+            <Label text="%Subtype" GridPane.rowIndex="2" />
+            <TextField fx:id="NameField" GridPane.columnIndex="1" />
+            <TextField fx:id="TypeField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="subTypeField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="%Court" GridPane.rowIndex="3">
+               <padding>
+                  <Insets top="5.0" />
+               </padding></Label>
+            <ComboBox fx:id="cb" accessibleRole="LIST_ITEM" cache="true" cacheHint="SPEED" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#courtPressed" opacity="0.83" prefWidth="150.0" promptText="%chooseOne" stylesheets="@Theme2.css" visibleRowCount="3" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="5.0" />
+               </GridPane.margin></ComboBox>
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="176.0" layoutY="233.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <buttons>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" text="OK" />
+          <Button mnemonicParsing="false" onAction="#handleCancel" prefWidth="120.0" text="%Cancel" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

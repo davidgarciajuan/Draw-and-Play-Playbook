@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #3d3d3d;" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Frame">
+   <center>
+      <AnchorPane maxHeight="600.0" prefHeight="745.0" prefWidth="656.0" BorderPane.alignment="BOTTOM_CENTER">
+         <children>
+            <AnchorPane maxHeight="575.0" prefHeight="575.0" prefWidth="700.0">
+               <children>
+                  <fx:include source="sketch.fxml" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane maxHeight="541.0" prefHeight="541.0" prefWidth="360.0">
+         <children>
+            <Rectangle arcHeight="5.0" cache="true" disable="true" fill="#1f93ff00" height="58.0" layoutX="9.0" layoutY="25.0" stroke="#868080" strokeLineJoin="BEVEL" strokeType="OUTSIDE" width="339.0" />
+            <Button layoutX="19.0" layoutY="66.0" mnemonicParsing="false" onAction="#handleNewPlay" text="%CreateFrame" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="40.0" />
+            <Button layoutX="146.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleEditPlay" text="%EditFrame" AnchorPane.leftAnchor="146.0" AnchorPane.topAnchor="40.0" />
+            <Button layoutX="245.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleDeletePlay" text="%DeleteFrame" AnchorPane.leftAnchor="245.0" AnchorPane.topAnchor="40.0" />
+            <TableView fx:id="ListTable" layoutX="25.0" layoutY="129.0" prefHeight="537.0" prefWidth="340.0" style="-: ;" AnchorPane.bottomAnchor="-96.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0">
+              <columns>
+                <TableColumn fx:id="NameColumn" prefWidth="75.0" text="%Name" />
+                <TableColumn fx:id="TypeColumn" prefWidth="75.0" text="%Type" />
+                  <TableColumn fx:id="subTypeColumn" prefWidth="75.0" text="%Subtype" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <GridPane gridLinesVisible="true" maxHeight="669.0" minWidth="170.0" prefHeight="669.0" prefWidth="170.0" BorderPane.alignment="BOTTOM_LEFT">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="60.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="70.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="%attackPlayers" />
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="offensePlayer" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#offensePlayerPressed" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/atacante.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="offensePlayer1" alignment="CENTER" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#offensePlayer1Pressed" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/atacante1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="offensePlayer2" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#offensePlayer2Pressed" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/atacante2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="offensePlayer3" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#offensePlayer3Pressed" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/atacante3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="offensePlayer4" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#offensePlayer4Pressed" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/atacante4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="offensePlayer5" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#offensePlayer5Pressed" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/atacante5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="offensePlayer6" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#offensePlayer6Pressed" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/atacante6.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="offensePlayer7" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#offensePlayer7Pressed" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/atacante7.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="offensePlayer8" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#offensePlayer8Pressed" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/atacante8.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="offensePlayer9" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#offensePlayer9Pressed" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/atacante9.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </GridPane>
+            <Label text="%defensePlayers" GridPane.rowIndex="2" />
+            <GridPane GridPane.rowIndex="3">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="defensePlayer" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#defensePlayerPressed" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/defensor.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="defensePlayer1" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#defensePlayer1Pressed" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/defensor1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="defensePlayer2" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#defensePlayer2Pressed" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/defensor2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="defensePlayer3" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#defensePlayer3Pressed" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/defensor3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="defensePlayer4" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#defensePlayer4Pressed" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/defensor4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="defensePlayer5" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#defensePlayer5Pressed" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/defensor5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="defensePlayer6" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#defensePlayer6Pressed" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/defensor6.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="defensePlayer7" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#defensePlayer7Pressed" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/defensor7.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="defensePlayer8" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#defensePlayer8Pressed" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/defensor8.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="defensePlayer9" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#defensePlayer9Pressed" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/defensor9.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </GridPane>
+            <Label text="%Movement" GridPane.rowIndex="4" />
+            <GridPane GridPane.rowIndex="5">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="line" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#linePressed" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Correr.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="shootline" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#shootLinePressed" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Trio.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="passline" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#passLinePressed" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Pase.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="bloqline" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#bloqLinePressed" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/bloqueo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="drillline" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#drillLinePressed" prefHeight="44.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Correr%20bote.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </GridPane>
+            <Label text="%Others" GridPane.rowIndex="6" />
+            <GridPane GridPane.rowIndex="7">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.0" minWidth="35.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.0" minWidth="35.0" prefWidth="35.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.0" minWidth="35.0" prefWidth="35.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.0" minWidth="35.0" prefWidth="35.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="35.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="ball" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#ballPressed" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/balón.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="cone" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#conePressed" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/cono.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="basket" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#basquetPressed" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/canasta.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="cesta" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#cestaPressed" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/cesta.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="coach" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#coachPressed" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/entrenador.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="stair" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#stairPressed" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/escalera.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets right="20.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </right>
+   <top>
+      <AnchorPane prefHeight="45.0" prefWidth="1350.0" BorderPane.alignment="CENTER">
+         <children>
+             <Button fx:id="redo" layoutX="230.0" layoutY="10.0" mnemonicParsing="false" onAction="#redoPressed" prefHeight="33.0" prefWidth="65.0" text="↻" AnchorPane.topAnchor="10.0" />
+             <Button fx:id="delete" layoutX="330.0" layoutY="10.0" mnemonicParsing="false" onAction="#deletePressed" text="%Delete" AnchorPane.topAnchor="10.0" />
+             <Button fx:id="undo" layoutX="116.0" layoutY="10.0" mnemonicParsing="false" onAction="#undoPressed" prefHeight="33.0" prefWidth="65.0" text="↺" AnchorPane.topAnchor="10.0" />
+            <Button layoutX="16.0" layoutY="10.0" mnemonicParsing="false" onAction="#savePressed" text="%SaveFrame" AnchorPane.topAnchor="10.0" />
+            <Button layoutX="933.0" layoutY="5.0" mnemonicParsing="false" onAction="#PlanPressed" prefHeight="45.0" prefWidth="175.0" text="Plan" AnchorPane.topAnchor="5.0" />
+            <Button layoutX="748.0" layoutY="5.0" mnemonicParsing="false" onAction="#PrintPressed" prefHeight="45.0" prefWidth="175.0" text="%printDrillFrame" AnchorPane.topAnchor="5.0" />
+            <Label fx:id="labelNombre" layoutX="385.0" layoutY="50.0" prefHeight="36.0" prefWidth="249.0" styleClass="label2" text=" ">
+               <stylesheets>
+                  <URL value="@Theme3.css" />
+                  <URL value="@Theme3.css" />
+               </stylesheets></Label>
+            <ImageView fitHeight="104.0" fitWidth="139.0" layoutX="597.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane fx:id="contador" prefHeight="177.0" prefWidth="1250.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="623.0" layoutY="21.0" mnemonicParsing="false" onAction="#atrasdibujo" text="%Previous" AnchorPane.topAnchor="71.0" />
+            <Button layoutX="749.0" layoutY="21.0" mnemonicParsing="false" onAction="#siguientedibujo" prefHeight="33.0" text="%Next" AnchorPane.topAnchor="71.0" />
+            <Button layoutX="514.0" layoutY="112.0" mnemonicParsing="false" onAction="#crearOtrocampo" prefHeight="33.0" prefWidth="184.0" text="%CreatePage" AnchorPane.topAnchor="112.0" />
+            <Button layoutX="750.0" layoutY="52.0" mnemonicParsing="false" onAction="#borrardibujo" prefHeight="33.0" prefWidth="179.0" text="%DeletePage" AnchorPane.topAnchor="110.0" />
+            <TextArea fx:id="descripcionArea" layoutX="416.0" layoutY="7.0" onMouseExited="#leerTexto" prefHeight="50.0" prefWidth="652.0" />
+            <GridPane gridLinesVisible="true" layoutX="1060.0" layoutY="44.0" prefHeight="65.0" prefWidth="170.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="35.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="%Zones" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <GridPane prefHeight="160.0" prefWidth="172.0" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="50.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="35.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="35.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="35.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                         <Button fx:id="rectangle" mnemonicParsing="false" onAction="#rectanglePressed" prefHeight="33.0" prefWidth="65.0" text="■" GridPane.columnIndex="1" />
+                         <Button fx:id="circle" mnemonicParsing="false" onAction="#circlePressed" prefHeight="33.0" prefWidth="65.0" text="●" GridPane.columnIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <Label fx:id="playNumberDiagram" layoutX="729.0" layoutY="78.0" prefHeight="19.0" prefWidth="27.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
