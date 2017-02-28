@@ -28,7 +28,7 @@ public class BloqLine extends UniverseShape {
 
     @Override
     public void draw() {
-        getLayer().getGraphicsContext2D().setLineWidth(getStrokeWidth());
+        getLayer().getGraphicsContext2D().setLineWidth(3);
         getLayer().getGraphicsContext2D().setStroke(getColor());
         
         

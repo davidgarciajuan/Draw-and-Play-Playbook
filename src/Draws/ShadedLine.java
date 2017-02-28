@@ -27,7 +27,7 @@ public class ShadedLine extends UniverseShape {
 
     @Override
     public void draw() {
-        getLayer().getGraphicsContext2D().setLineWidth(getStrokeWidth());
+        getLayer().getGraphicsContext2D().setLineWidth(2);
         getLayer().getGraphicsContext2D().setStroke(getColor());
         getLayer().getGraphicsContext2D().setLineDashes(6);
         getLayer().getGraphicsContext2D().strokeLine(getPosition()[0], getPosition()[1], endPoint[0], endPoint[1]);

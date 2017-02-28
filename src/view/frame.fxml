@@ -307,9 +307,9 @@
                   </Button>
                   <Button fx:id="drillline" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#drillLinePressed" prefHeight="44.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Images/Correr%20bote.png" />
+                              <Image url="@../Images/Bote.png" />
                            </image>
                         </ImageView>
                      </graphic></Button>
@@ -404,7 +404,7 @@
                   <URL value="@Theme3.css" />
                   <URL value="@Theme3.css" />
                </stylesheets></Label>
-            <ImageView fitHeight="104.0" fitWidth="139.0" layoutX="597.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="64.0" fitWidth="88.0" layoutX="634.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Images/Logo.png" />
                </image>

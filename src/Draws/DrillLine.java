@@ -28,7 +28,7 @@ public class DrillLine extends UniverseShape {
 
     @Override
     public void draw() {
-
+        getLayer().getGraphicsContext2D().setLineWidth(2);
         getLayer().getGraphicsContext2D().setStroke(getColor());
 
         
