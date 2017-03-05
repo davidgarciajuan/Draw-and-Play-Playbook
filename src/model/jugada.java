@@ -150,6 +150,7 @@ public class jugada {
             instruccion.setString(5, pistaJugada.get());
             instruccion.setString(6, descripcionJugada.get());
             instruccion.setString(7, coordenadasJugada.get());
+            instruccion.close();
             return instruccion.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -174,7 +175,7 @@ public class jugada {
             instruccion.setString(4, nombreJugada.get());
             instruccion.setString(5, tipoJugada.get());
             instruccion.setString(6, subtipoJugada.get());
-
+            instruccion.close();
             return instruccion.executeUpdate();
 
         } catch (SQLException e) {
@@ -202,7 +203,8 @@ public class jugada {
             instruccion.setString(5, anteriorName);
             instruccion.setString(6, anteriorTipo);
             instruccion.setString(7, anteriorSubtipo);
-
+            instruccion.close();
+            
             return instruccion.executeUpdate();
 
         } catch (SQLException e) {
@@ -221,6 +223,8 @@ public class jugada {
             instruccion.setString(1, nombreJugada.get());
             instruccion.setString(2, tipoJugada.get());
             instruccion.setString(3, subtipoJugada.get());
+            instruccion.close();
+            
             return instruccion.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -245,6 +249,7 @@ public class jugada {
                         resultado.getString("coordenadas")
                 )
                 );
+               instruccion.close();
             }
 
         } catch (SQLException ex) {
